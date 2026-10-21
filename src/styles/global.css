@@ -1,1 +1,91 @@
 @import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+/* ===== Paleta: modo oscuro (por defecto) ===== */
+:root {
+  color-scheme: dark;
+
+  --c-bg: #0b0c0e;
+  --c-surface: #131418;
+  --c-surface-2: #1c1d22;
+  --c-border: #26272b;
+  --c-border-strong: #3f3f46;
+  --c-fg: #ededef;
+  --c-muted: #a1a1aa;
+  --c-accent: #60a5fa;
+  --c-success: #4ade80;
+
+  /* Resaltado de sintaxis del bloque Java */
+  --c-code-keyword: #c4b5fd;
+  --c-code-type: #93c5fd;
+  --c-code-string: #86efac;
+  --c-code-literal: #fdba74;
+  --c-code-method: #fde68a;
+}
+
+/* ===== Paleta: modo claro ===== */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --c-bg: #fafafa;
+  --c-surface: #ffffff;
+  --c-surface-2: #f4f4f5;
+  --c-border: #e4e4e7;
+  --c-border-strong: #d4d4d8;
+  --c-fg: #18181b;
+  --c-muted: #52525b;
+  --c-accent: #2563eb;
+  --c-success: #16a34a;
+
+  --c-code-keyword: #7c3aed;
+  --c-code-type: #1d4ed8;
+  --c-code-string: #15803d;
+  --c-code-literal: #c2410c;
+  --c-code-method: #a16207;
+}
+
+/* ===== Conectar la paleta con Tailwind ===== */
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-border: var(--c-border);
+  --color-border-strong: var(--c-border-strong);
+  --color-fg: var(--c-fg);
+  --color-muted: var(--c-muted);
+  --color-accent: var(--c-accent);
+  --color-success: var(--c-success);
+
+  --color-code-keyword: var(--c-code-keyword);
+  --color-code-type: var(--c-code-type);
+  --color-code-string: var(--c-code-string);
+  --color-code-literal: var(--c-code-literal);
+  --color-code-method: var(--c-code-method);
+
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+
+/* ===== Estilos base ===== */
+@layer base {
+  html {
+    @apply bg-bg text-fg font-sans antialiased;
+  }
+
+  ::selection {
+    background-color: var(--c-accent);
+    color: var(--c-bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}

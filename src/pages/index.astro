@@ -1,16 +1,21 @@
 ---
+import '../styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adrián Peña · Prueba de estilos</title>
+  </head>
+  <body class="p-8">
+    <h1 class="text-4xl font-semibold tracking-tight">Adrián Peña</h1>
+    <p class="mt-2 text-muted">Texto secundario en gris.</p>
+   	<p class="mt-4 font-mono text-sm">
+  	<span class="text-code-keyword">public class</span>{" "}<span 	class="text-code-type">AdrianPena</span> {"{}"}
+	</p>
+    <div class="mt-6 rounded-xl border border-border bg-surface p-6">
+      Una tarjeta con borde y fondo de superficie.
+    </div>
+  </body>
 </html>
