@@ -19,18 +19,18 @@ const imageURL = new URL(image, Astro.site).href;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Tema: la web tiene modo oscuro propio -->
+    {/* Tema: la web tiene modo oscuro propio */}
     <meta name="color-scheme" content="dark light" />
     <meta name="darkreader-lock" />
 
-    <!-- SEO básico -->
+    {/* SEO básico */}
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Adrián Peña Gómez" />
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Open Graph: tarjeta al compartir en LinkedIn, WhatsApp... -->
+    {/* Open Graph: tarjeta al compartir en LinkedIn, WhatsApp... */}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="Adrián Peña" />
@@ -41,7 +41,7 @@ const imageURL = new URL(image, Astro.site).href;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Tarjeta grande en X/Twitter -->
+    {/* Tarjeta grande en X/Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body class="min-h-dvh">
