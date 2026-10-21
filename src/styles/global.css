@@ -64,7 +64,8 @@
   --color-code-method: var(--c-code-method);
 
   --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-mono:
+    "Geist Mono Variable", ui-monospace, "SFMono-Regular", Consolas, monospace;
 }
 
 /* ===== Estilos base ===== */
