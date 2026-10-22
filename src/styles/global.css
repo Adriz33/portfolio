@@ -92,7 +92,6 @@
   /* ===== Botón de tema: un icono según el modo ===== */
   .theme-icon-moon {
     display: none;
-    
   }
 
   [data-theme="light"] .theme-icon-sun {
@@ -102,4 +101,47 @@
   [data-theme="light"] .theme-icon-moon {
     display: block;
   }
+}
+/* ===== Carrusel de tecnologías ===== */
+.marquee {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marquee-track {
+  animation: marquee 80s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+    width: auto;
+  }
+  .marquee-track > ul {
+    flex-wrap: wrap;
+  }
+  .marquee-track > ul:last-child {
+    display: none;
+  }
+}
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+:root:not([data-theme="light"]) .invert-on-dark {
+  filter: invert(1);
 }

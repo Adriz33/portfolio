@@ -13,7 +13,7 @@ export const projects: Project[] = [
     context: "Freelance · Colaboración",
     problem:
       "Un estudio de diseño y desarrollo web de Toledo necesitaba una web propia para presentar sus servicios.",
-    role: "Ptoyecto realizado junto a un compañero, desde la planificación hasta el desarrollo final.",
+    role: "Proyecto realizado junto a un compañero, desde la planificación hasta el desarrollo final.",
     tech: ["React", "JavaScript", "CSS"],
     url: "https://katan.es/",
   },
