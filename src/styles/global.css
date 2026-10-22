@@ -89,4 +89,17 @@
       scroll-behavior: smooth;
     }
   }
+  /* ===== Botón de tema: un icono según el modo ===== */
+  .theme-icon-moon {
+    display: none;
+    
+  }
+
+  [data-theme="light"] .theme-icon-sun {
+    display: none;
+  }
+
+  [data-theme="light"] .theme-icon-moon {
+    display: block;
+  }
 }
