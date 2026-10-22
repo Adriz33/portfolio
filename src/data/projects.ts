@@ -1,3 +1,6 @@
+import katan from '../assets/proyectos/katan.png';
+import lavanderia from '../assets/proyectos/lavanderia.png';
+
 export interface Project {
   name: string;
   context: string;
@@ -5,6 +8,7 @@ export interface Project {
   role: string;
   tech: string[];
   url: string;
+  image: ImageMetadata;
 }
 
 export const projects: Project[] = [
@@ -16,6 +20,7 @@ export const projects: Project[] = [
     role: "Proyecto realizado junto a un compañero, desde la planificación hasta el desarrollo final.",
     tech: ["React", "JavaScript", "CSS"],
     url: "https://katan.es/",
+    image: katan,
   },
   {
     name: "Lavandería Gómez",
@@ -25,5 +30,6 @@ export const projects: Project[] = [
     role: "Una landing page diseñada con el fin de aportar una experiencia eficaz y sencilla para el usuario.",
     tech: ["Astro", "Tailwind", "JavaScript", "HTML", "CSS"],
     url: "https://lavanderia-gomez.vercel.app/",
+    image: lavanderia,
   },
 ];

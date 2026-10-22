@@ -1,6 +1,7 @@
 ---
 import github from 'devicon/icons/github/github-original.svg?url';
 import linkedin from 'devicon/icons/linkedin/linkedin-original.svg?url';
+import Campfire from './Campfire.astro';
 
 const email = 'adriz6149@gmail.com';
 
@@ -54,7 +55,10 @@ const links = [
       </ul>
     </div>
 
-    {/* Columna derecha: pendiente de decidir */}
-    <div></div>
+    <div class="hidden items-end justify-center md:flex">
+      <a href="#" aria-label="Volver al inicio" title="Volver al inicio" class="rounded-md transition-transform duration-200 hover:-translate-y-1">
+        <Campfire />
+      </a>
+    </div>
   </div>
 </section>
