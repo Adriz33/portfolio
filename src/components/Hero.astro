@@ -1,0 +1,74 @@
+---
+// Cada línea del bloque de código es una lista de trozos [tipo, texto]
+const code: [string, string][][] = [
+  [['comment', '// Estudiante de DAW · Toledo.']],
+  [['keyword', 'public class '], ['type', 'Adrian Peña'], ['plain', ' {']],
+  [],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '   rol        = '], ['string', '"Desarrollador web"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '   busco      = '], ['string', '"Empleo"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '   ciudad     = '], ['string', '"Toledo"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private boolean'], ['plain', '  disponible = '], ['literal', 'true'], ['plain', ';']],
+  [],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '[] stack = {']],
+  [['plain', '    '], ['string', '"Java"'], ['plain', ', '], ['string', '"HTML"'], ['plain', ', '], ['string', '"CSS"'], ['plain', ', '], ['string', '"TypeScript"'], ['plain', ',']],
+  [['plain', '    '], ['string', '"Astro"'], ['plain', ', '], ['string', '"Tailwind"'], ['plain', ', '], ['string', '"Git"']],
+  [['plain', '  };']],
+  [],
+  [['plain', '  '], ['keyword', 'public '], ['type', 'String'], ['plain', ' '], ['method', 'contactar'], ['plain', '() {']],
+  [['plain', '    '], ['keyword', 'return '], ['string', '"adriz6149@gmail.com"'], ['plain', ';']],
+  [['plain', '  }']],
+  [['plain', '}']],
+];
+
+const colors: Record<string, string> = {
+  comment: 'text-muted',
+  keyword: 'text-code-keyword',
+  type: 'text-code-type',
+  string: 'text-code-string',
+  literal: 'text-code-literal',
+  method: 'text-code-method',
+  plain: '',
+};
+---
+
+<section class="mx-auto grid max-w-5xl items-center gap-12 px-6 py-20 md:grid-cols-[1fr_1.2fr] md:py-28">
+  <div class="flex flex-col gap-6">
+    <div class="flex items-center gap-4">
+      <div class="relative size-24 shrink-0">
+        <div class="flex size-24 items-center justify-center rounded-full border border-border-strong bg-surface-2 font-mono text-xl text-muted" aria-hidden="true">
+          AP
+        </div>
+        <span class="absolute right-1 bottom-1 size-4 rounded-full border-[3px] border-bg bg-success" aria-hidden="true"></span>
+      </div>
+      <div class="font-mono text-sm">
+        <p>@Adriz33</p>
+        <p class="text-muted">disponible = true</p>
+      </div>
+    </div>
+
+    <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+      Adrián Peña, desarrollador web.
+    </h1>
+
+    <p class="max-w-md text-lg text-muted">
+      Estudio DAW en Toledo y busco empleo como desarrollador web.
+    </p>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="/#contacto" class="rounded-lg bg-fg px-5 py-3 font-medium text-bg transition-opacity hover:opacity-90">
+        Contactar
+      </a>
+      <a href="/cv.pdf" download class="rounded-lg border border-border-strong px-5 py-3 font-medium transition-colors hover:bg-surface">
+        Descargar CV
+      </a>
+    </div>
+  </div>
+
+  <figure class="min-w-0 overflow-hidden rounded-xl border border-border bg-surface">
+    <figcaption class="sr-only">Mi perfil resumido como una clase de Java</figcaption>
+    <div class="flex border-b border-border font-mono text-xs">
+      <span class="-mb-px border-b border-accent px-4 py-3">adrianPeña.java</span>
+    </div>
+    <pre class="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed"><code>{code.map((line, i) => (<span class="block"><span class="mr-4 inline-block w-5 text-right text-border-strong select-none" aria-hidden="true">{i + 1}</span>{line.map(([kind, text]) => <span class={colors[kind]}>{text}</span>)}</span>))}</code></pre>
+  </figure>
+</section>
