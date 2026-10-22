@@ -44,6 +44,19 @@ const imageURL = new URL(image, Astro.site).href;
 
     {/* Tarjeta grande en X/Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
+
+        <script is:inline>
+      (() => {
+        let theme = null;
+        try {
+          theme = localStorage.getItem('theme');
+        } catch {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
   <body class="min-h-dvh">
     <a
