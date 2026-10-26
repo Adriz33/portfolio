@@ -28,14 +28,14 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --c-bg: #fafafa;
+  --c-bg: #ebebe8;
   --c-surface: #ffffff;
-  --c-surface-2: #f4f4f5;
-  --c-border: #e4e4e7;
-  --c-border-strong: #d4d4d8;
+  --c-surface-2: #f3f3f1;
+  --c-border: #d4d4d1;
+  --c-border-strong: #b9b9b5;
   --c-fg: #18181b;
   --c-muted: #52525b;
-  --c-accent: #2563eb;
+  --c-accent: #1d4ed8;
   --c-success: #16a34a;
 
   --c-code-keyword: #7c3aed;
@@ -115,7 +115,7 @@
 }
 
 .marquee-track {
-  animation: marquee 80s linear infinite;
+  animation: marquee 45s linear infinite;
 }
 
 @keyframes marquee {

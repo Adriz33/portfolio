@@ -10,6 +10,9 @@ import java from 'devicon/icons/java/java-original.svg?url';
 import mysql from 'devicon/icons/mysql/mysql-original.svg?url';
 import git from 'devicon/icons/git/git-original.svg?url';
 import figma from 'devicon/icons/figma/figma-original.svg?url';
+import vscode from 'devicon/icons/vscode/vscode-original.svg?url';
+import intellij from 'devicon/icons/intellij/intellij-original.svg?url';
+import eclipse from 'devicon/icons/eclipse/eclipse-original.svg?url';
 
 type Tech = { src: string; name: string; invert?: boolean };
 
@@ -21,13 +24,16 @@ const rows: Tech[][] = [
     { src: typescript, name: 'TypeScript' },
     { src: react, name: 'React' },
     { src: astro, name: 'Astro', invert: true },
+    { src: tailwind, name: 'Tailwind' },
   ],
   [
-    { src: tailwind, name: 'Tailwind' },
     { src: java, name: 'Java' },
     { src: mysql, name: 'SQL' },
     { src: git, name: 'Git' },
     { src: figma, name: 'Figma' },
+    { src: vscode, name: 'VS Code' },
+    { src: intellij, name: 'IntelliJ' },
+    { src: eclipse, name: 'Eclipse' },
   ],
 ];
 ---
@@ -41,12 +47,12 @@ const rows: Tech[][] = [
         <div class:list={['marquee-track flex w-max', r === 1 && 'marquee-reverse']}>
           {[0, 1].map((copy) => (
             <ul class="flex gap-4 pr-4" aria-hidden={copy === 1 ? 'true' : undefined}>
-            {[...row, ...row].map(({ src, name, invert }, i) => (
-                <li ariea-hidden={i >= row.length ? 'true' : undefined}class="flex items-center gap-3 rounded-lg border border-teal-500/70 bg-surface px-5 py-3 transition duration-00 hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-[0_0_18px_-2px_rgba(20,184,166,0.55)]">
-                <img src={src} alt="" width="22" height="22" class:list={['size-[22px]', invert && 'invert-on-dark']} />
-                <span class="font-mono text-base tracking-wide">{name}</span>
+              {row.map(({ src, name, invert }) => (
+                <li class="flex items-center gap-3 rounded-md border border-teal-500/70 bg-surface px-5 py-3 transition duration-200 hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-[0_0_18px_-2px_rgba(20,184,166,0.55)]">
+                  <img src={src} alt="" width="22" height="22" class:list={['size-[22px]', invert && 'invert-on-dark']} />
+                  <span class="font-mono text-base tracking-wide">{name}</span>
                 </li>
-            ))}
+              ))}
             </ul>
           ))}
         </div>

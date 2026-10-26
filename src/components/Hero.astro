@@ -7,9 +7,9 @@ const code: [string, string][][] = [
   [['comment', '// Estudiante de DAW · Toledo.']],
   [['keyword', 'public class '], ['type', 'Adrian Peña'], ['plain', ' {']],
   [],
-  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  rol = '], ['string', '"Desarrollador web"'], ['plain', ';']],
-  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  busco = '], ['string', '"Empleo"'], ['plain', ';']],
-  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  ciudad = '], ['string', '"Toledo"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  rol        = '], ['string', '"Desarrollador web"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  busco      = '], ['string', '"Empleo"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  ciudad     = '], ['string', '"Toledo"'], ['plain', ';']],
   [['plain', '  '], ['keyword', 'private boolean'], ['plain', ' disponible = '], ['literal', 'true'], ['plain', ';']],
   [],
   [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '[] stack = {']],
@@ -42,7 +42,7 @@ const colors: Record<string, string> = {
           src={fotoPerfil}
           alt="Foto de Adrián Peña"
           width={192}
-          class="size-24 rounded-full object-cover object-[50%_42%] [mask-image:radial-gradient(closest-side,black_72%,transparent)]"
+          class="size-24 rounded-full border border-teal-500/70 object-cover object-[50%_42%] shadow-[0_0_14px_-3px_rgba(20,184,166,0.45)]"
         />
         <span class="absolute right-1 bottom-1 size-4 rounded-full border-[3px] border-bg bg-success" aria-hidden="true"></span>
       </div>
@@ -57,7 +57,7 @@ const colors: Record<string, string> = {
     </h1>
 
     <p class="max-w-md text-lg text-muted">
-      Estudiante de DAW.<br>
+
       Abriendo camino en el desarrollo web full stack. 
       <br><br>
       A programar se aprende programando. Así es y será.
@@ -67,7 +67,7 @@ const colors: Record<string, string> = {
     </p>
   </div>
 
-  <figure class="min-w-0 overflow-hidden rounded-xl border border-border bg-surface">
+  <figure class="min-w-0 overflow-hidden rounded-md border border-border bg-surface">
     <figcaption class="sr-only">Mi perfil resumido como una clase de Java</figcaption>
     <div class="flex border-b border-border font-mono text-xs">
       <span class="-mb-px border-b border-accent px-4 py-3">adrianPeña.java</span>

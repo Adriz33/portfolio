@@ -1,6 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import { projects } from '../data/projects';
+
+// Color corporativo de cada tecnología
+const techColors: Record<string, string> = {
+  React: '#149ECA',
+  JavaScript: '#F7DF1E',
+  TypeScript: '#3178C6',
+  CSS: '#264DE4',
+  HTML: '#E34F26',
+  Astro: '#BC52EE',
+  Tailwind: '#06B6D4',
+  Java: '#ED8B00',
+  SQL: '#4479A1',
+};
 ---
 
 <section id="proyectos" class="mx-auto max-w-6xl px-6 py-20">
@@ -11,8 +24,8 @@ import { projects } from '../data/projects';
 
   <div class="grid gap-6 md:grid-cols-2">
     {projects.map((project) => (
-      <article class="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface">
-        <div class="overflow-hidden border-b border-border">
+      <article class="group flex flex-col overflow-hidden rounded-md border border-border bg-surface">
+        <a href={project.url} target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true" class="block overflow-hidden border-b border-border">
           <Image
             src={project.image}
             alt={`Captura de la web de ${project.name}`}
@@ -20,7 +33,7 @@ import { projects } from '../data/projects';
             sizes="(min-width: 768px) 36rem, 100vw"
             class="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
           />
-        </div>
+        </a>
 
         <div class="flex flex-1 flex-col gap-4 p-6 sm:p-8">
           <p class="font-mono text-xs text-muted">
@@ -36,7 +49,7 @@ import { projects } from '../data/projects';
 
           <ul class="flex flex-wrap gap-2 font-mono text-xs" aria-label="Tecnologías">
             {project.tech.map((tech) => (
-              <li class="rounded-md border border-border-strong px-2 py-1">{tech}</li>
+              <li class="tech-tag rounded-md border px-2 py-1" style={`--tech: ${techColors[tech] ?? 'var(--c-border-strong)'}`}>{tech}</li>
             ))}
           </ul>
 
@@ -54,3 +67,10 @@ import { projects } from '../data/projects';
     ))}
   </div>
 </section>
+
+<style>
+  .tech-tag {
+    border-color: color-mix(in srgb, var(--tech) 65%, transparent);
+    background-color: color-mix(in srgb, var(--tech) 14%, transparent);
+  }
+</style>
