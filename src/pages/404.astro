@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Página no encontrada · Adrián Peña"
+  description="La página que buscas no existe. Vuelve al portfolio de Adrián Peña."
+>
+  <section class="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-24 text-center">
+    <img
+      src="/hoguera.webp"
+      alt=""
+      width="200"
+      height="190"
+      class="h-auto w-40 [image-rendering:pixelated]"
+    />
+    <p class="font-mono text-sm text-muted">return 404;</p>
+    <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+      Esta página no existe
+    </h1>
+    <p class="max-w-md text-muted">
+      Puede que el enlace esté mal escrito o que la página se haya movido.
+    </p>
+    <a
+      href="/"
+      class="rounded-md border border-teal-500/60 px-5 py-3 font-medium transition-colors hover:border-teal-400 hover:bg-surface"
+    >
+      Volver al inicio
+    </a>
+  </section>
+</Layout>

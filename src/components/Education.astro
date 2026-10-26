@@ -1,0 +1,46 @@
+---
+const education = [
+  {
+    title: 'CFGS Desarrollo de Aplicaciones Web',
+    center: 'IES Azarquiel · Toledo',
+    url: 'http://www.ies-azarquiel.es/',
+    years: '2025 — en curso',
+    current: true,
+  },
+  {
+    title: 'Bachillerato',
+    center: '',
+    url: '',
+    years: '',
+    current: false,
+  },
+];
+---
+
+<section id="formacion" class="mx-auto max-w-6xl px-6 py-20">
+  <h2 class="mb-10 text-3xl font-semibold tracking-tight">Formación</h2>
+
+  <ol class="divide-y divide-border overflow-hidden rounded-md border border-border bg-surface">
+    {education.map((item) => (
+      <li class="flex flex-col gap-1 px-5 py-5 sm:flex-row sm:items-baseline sm:gap-8">
+        <span class="w-40 shrink-0 font-mono text-sm text-muted">
+          {item.current && <span class="mr-1 text-success" aria-hidden="true">●</span>}
+          {item.years}
+        </span>
+        <div>
+          <p class="font-medium">{item.title}</p>
+          {item.center && (
+            item.url ? (
+              <a href={item.url} target="_blank" rel="noopener noreferrer" class="text-muted transition-colors hover:text-teal-400">
+                {item.center} <span aria-hidden="true">↗</span>
+                <span class="sr-only">(se abre en una pestaña nueva)</span>
+              </a>
+            ) : (
+              <p class="text-muted">{item.center}</p>
+            )
+          )}
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>

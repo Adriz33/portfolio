@@ -29,7 +29,8 @@ const imageURL = new URL(image, Astro.site).href;
     <meta name="description" content={description} />
     <meta name="author" content="Adrián Peña Gómez" />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     {/* Open Graph: tarjeta al compartir en LinkedIn, WhatsApp... */}
     <meta property="og:type" content="website" />
@@ -41,6 +42,7 @@ const imageURL = new URL(image, Astro.site).href;
     <meta property="og:image" content={imageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Adrián Peña, desarrollador web" />
 
     {/* Tarjeta grande en X/Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
