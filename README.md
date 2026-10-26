@@ -8,9 +8,7 @@ Mi portfolio personal como desarrollador web. Aquí presento quién soy, los pro
 
 ## Sobre el proyecto
 
-Es la segunda versión de mi portfolio. La primera tenía una temática de Dark Souls y, aunque me gustaba, no era lo más adecuado para presentarme a una empresa. Así que lo rehice desde cero con un diseño más limpio y profesional, aunque dejé una hoguera como guiño a la versión anterior.
-
-Lo he hecho mientras estudio el CFGS de Desarrollo de Aplicaciones Web en el IES Azarquiel (Toledo).
+Proyecto de carácter personal, creado por iniciativa propia para visibilizar mi presencia en el mundo laboral.
 
 ## Tecnologías
 
