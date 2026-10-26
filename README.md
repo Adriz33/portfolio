@@ -1,43 +1,107 @@
-# Astro Starter Kit: Minimal
+# Portfolio · Adrián Peña
 
-```sh
-npm create astro@latest -- --template minimal
+Mi portfolio personal como desarrollador web. Aquí presento quién soy, los proyectos en los que he trabajado, las tecnologías que uso, mi formación y cómo contactar conmigo.
+
+**Web:** [adrianpenia-dev.vercel.app](https://adrianpenia-dev.vercel.app)
+
+![Vista previa del portfolio](public/og.png)
+
+## Sobre el proyecto
+
+Es la segunda versión de mi portfolio. La primera tenía una temática de Dark Souls y, aunque me gustaba, no era lo más adecuado para presentarme a una empresa. Así que lo rehice desde cero con un diseño más limpio y profesional, aunque dejé una hoguera como guiño a la versión anterior.
+
+Lo he hecho mientras estudio el CFGS de Desarrollo de Aplicaciones Web en el IES Azarquiel (Toledo).
+
+## Tecnologías
+
+- [Astro](https://astro.build): framework principal
+- [Tailwind CSS 4](https://tailwindcss.com): estilos
+- TypeScript
+- [Fontsource](https://fontsource.org): fuentes Geist y Geist Mono, alojadas en el propio proyecto
+- [Devicon](https://devicon.dev): iconos de las tecnologías
+- [Vercel](https://vercel.com): despliegue
+
+## Funcionalidades
+
+- Modo claro y oscuro. Recuerda la elección del usuario y respeta la del sistema operativo.
+- Presentación escrita como una clase de Java.
+- Sección de proyectos con capturas, el problema que resolvía cada uno y las tecnologías usadas.
+- Carrusel con las tecnologías y herramientas que manejo.
+- Diseño responsive para móvil, tablet y escritorio.
+- Página 404 propia.
+- SEO básico y Open Graph, para que el enlace se vea bien al compartirlo en LinkedIn o WhatsApp.
+- Accesibilidad: navegación con teclado, enlace para saltar al contenido, buen contraste de colores y respeto a la opción de reducir animaciones.
+
+## Cómo ejecutarlo en local
+
+### Requisitos
+
+- [Node.js](https://nodejs.org) 22.22 o superior
+- npm
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Adriz33/portfolio.git
+cd portfolio
+
+# 2. Instalar las dependencias
+npm install
+
+# 3. Arrancar el servidor de desarrollo
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+La web se abre en `http://localhost:4321`.
 
-## 🚀 Project Structure
+> **Nota para Windows:** si usas PowerShell y te da un error de scripts al ejecutar `npm`, prueba con `npm.cmd` o usa Git Bash.
 
-Inside of your Astro project, you'll see the following folders and files:
+### Comandos
+
+| Comando           | Qué hace                                         |
+| ----------------- | ------------------------------------------------ |
+| `npm run dev`     | Arranca el servidor de desarrollo                |
+| `npm run build`   | Genera la web final en la carpeta `dist/`        |
+| `npm run preview` | Muestra en local la versión generada con `build` |
+
+## Estructura
 
 ```text
-/
-├── public/
+portfolio/
+├── public/              # Archivos que se sirven tal cual (favicon, imagen para compartir, hoguera)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/          # Imágenes que optimiza Astro (foto de perfil y capturas)
+│   ├── components/      # Una pieza por sección: Header, Hero, Projects, Stack...
+│   ├── data/
+│   │   └── projects.ts  # Datos de los proyectos
+│   ├── layouts/
+│   │   └── Layout.astro # Estructura común de todas las páginas y etiquetas SEO
+│   ├── pages/
+│   │   ├── index.astro  # Página principal
+│   │   └── 404.astro    # Página de error
+│   └── styles/
+│       └── global.css   # Colores, fuentes y animaciones
+└── astro.config.mjs
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Para añadir un proyecto nuevo solo hay que añadir un objeto en `src/data/projects.ts` y su captura en `src/assets/proyectos/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Despliegue
 
-Any static assets, like images, can be placed in the `public/` directory.
+La web está desplegada en Vercel y conectada a este repositorio. Cada vez que hago `git push` a la rama `main`, Vercel genera la web y la publica automáticamente.
 
-## 🧞 Commands
+## Lo que he aprendido
 
-All commands are run from the root of the project, from a terminal:
+- Organizar una web en componentes y separar los datos del diseño.
+- Crear un modo claro y oscuro con variables CSS.
+- Etiquetas de SEO y Open Graph, y por qué necesitan URLs absolutas.
+- Pequeños detalles de accesibilidad que antes no tenía en cuenta.
+- Leer los errores con calma en vez de cambiar cosas a ciegas.
+- Trabajar con Git de forma más ordenada y desplegar de forma continua.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contacto
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Email: [adriz6149@gmail.com](mailto:adriz6149@gmail.com)
+- LinkedIn: [Adrián Peña Gómez](https://linkedin.com/in/adrian-peña-gómez97)
+- GitHub: [@Adriz33](https://github.com/Adriz33)
