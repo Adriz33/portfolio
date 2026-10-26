@@ -1,5 +1,5 @@
-import katan from '../assets/proyectos/katan.png';
-import lavanderia from '../assets/proyectos/lavanderia.png';
+import katan from "../assets/proyectos/katan.png";
+import lavanderia from "../assets/proyectos/lavanderia.png";
 
 export interface Project {
   name: string;
@@ -16,8 +16,8 @@ export const projects: Project[] = [
     name: "Katan Studio",
     context: "Freelance · Colaboración",
     problem:
-      "Un estudio de diseño y desarrollo web de Toledo necesitaba una web propia para presentar sus servicios.",
-    role: "Proyecto realizado junto a un compañero, desde la planificación hasta el desarrollo final.",
+      "Estudio de diseño y desarrollo web sin web propia para presentar sus servicios.",
+    role: "Participación colaborativa: planificación, diseño de la interfaz y desarrollo en React.",
     tech: ["React", "JavaScript", "CSS"],
     url: "https://katan.es/",
     image: katan,
@@ -25,9 +25,8 @@ export const projects: Project[] = [
   {
     name: "Lavandería Gómez",
     context: "Proyecto personal · Negocio",
-    problem:
-      "Una lavandería industrial que no tenía presencia online y los nuevos clientes no la encontraban.",
-    role: "Una landing page diseñada con el fin de aportar una experiencia eficaz y sencilla para el usuario.",
+    problem: "Lavandería industrial sin presencia online.",
+    role: "Diseñé y desarrollé la web completa: servicios, horario, ubicación y contacto directo por WhatsApp, teléfono y email.",
     tech: ["Astro", "Tailwind", "JavaScript", "HTML", "CSS"],
     url: "https://lavanderia-gomez.vercel.app/",
     image: lavanderia,

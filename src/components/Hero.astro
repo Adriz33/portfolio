@@ -2,9 +2,9 @@
 import { Image } from 'astro:assets';
 import fotoPerfil from '../assets/imgperfil.jpg';
 
-// Cada línea del bloque de código es una lista de trozos [tipo, texto]
+
 const code: [string, string][][] = [
-  [['keyword', 'public class '], ['type', 'Adrian Peña'], ['plain', ' {']],
+  [['keyword', 'public class '], ['type', 'AdrianPeña'], ['plain', ' {']],
   [],
   [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  rol = '], ['string', '"Desarrollador web"'], ['plain', ';']],
   [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  busco = '], ['string', '"Empleo"'], ['plain', ';']],
@@ -38,7 +38,7 @@ const colors: Record<string, string> = {
       <div class="relative size-24 shrink-0">
         <Image
           src={fotoPerfil}
-          alt="Foto de Adrián Peña"
+          alt="Foto de Adrián"
           width={192}
           class="size-24 rounded-full border border-teal-500/70 object-cover object-[50%_42%] shadow-[0_0_14px_-3px_rgba(20,184,166,0.45)]"
         />
@@ -70,7 +70,7 @@ const colors: Record<string, string> = {
   <figure class="min-w-0 overflow-hidden rounded-md border border-border bg-surface">
     <figcaption class="sr-only">Mi perfil resumido como una clase de Java</figcaption>
     <div class="flex border-b border-border font-mono text-xs">
-      <span class="-mb-px border-b border-accent px-4 py-3">adrianPeña.java</span>
+      <span class="-mb-px border-b border-accent px-4 py-3">AdrianPeña.java</span>
     </div>
     <pre class="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed"><code>{code.map((line, i) => (<span class="block"><span class="mr-4 inline-block w-5 text-right text-muted select-none" aria-hidden="true">{i + 1}</span>{line.map(([kind, text]) => <span class={colors[kind]}>{text}</span>)}</span>))}</code></pre>
   </figure>
