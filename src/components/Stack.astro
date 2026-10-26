@@ -14,6 +14,7 @@ import vscode from 'devicon/icons/vscode/vscode-original.svg?url';
 import intellij from 'devicon/icons/intellij/intellij-original.svg?url';
 import eclipse from 'devicon/icons/eclipse/eclipse-original.svg?url';
 import spring from 'devicon/icons/spring/spring-original.svg?url';
+import github from 'devicon/icons/github/github-original.svg?url';
 
 type Tech = { src: string; name: string; invert?: boolean };
 
@@ -26,13 +27,14 @@ const rows: Tech[][] = [
     { src: react, name: 'React' },
     { src: astro, name: 'Astro', invert: true },
     { src: tailwind, name: 'Tailwind' },
+    { src: figma, name: 'Figma' },
   ],
   [
     { src: java, name: 'Java' },
     { src: spring, name: 'Spring Boot' },
     { src: mysql, name: 'SQL' },
     { src: git, name: 'Git' },
-    { src: figma, name: 'Figma' },
+    { src: github, name: 'GitHub', invert: true },
     { src: vscode, name: 'VS Code' },
     { src: intellij, name: 'IntelliJ' },
     { src: eclipse, name: 'Eclipse' },
