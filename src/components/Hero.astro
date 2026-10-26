@@ -72,6 +72,6 @@ const colors: Record<string, string> = {
     <div class="flex border-b border-border font-mono text-xs">
       <span class="-mb-px border-b border-accent px-4 py-3">adrianPeña.java</span>
     </div>
-    <pre class="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed"><code>{code.map((line, i) => (<span class="block"><span class="mr-4 inline-block w-5 text-right text-border-strong select-none" aria-hidden="true">{i + 1}</span>{line.map(([kind, text]) => <span class={colors[kind]}>{text}</span>)}</span>))}</code></pre>
+    <pre class="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed"><code>{code.map((line, i) => (<span class="block"><span class="mr-4 inline-block w-5 text-right text-muted select-none" aria-hidden="true">{i + 1}</span>{line.map(([kind, text]) => <span class={colors[kind]}>{text}</span>)}</span>))}</code></pre>
   </figure>
 </section>
