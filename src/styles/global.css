@@ -23,6 +23,7 @@
   --c-code-string: #86efac;
   --c-code-literal: #fdba74;
   --c-code-method: #fde68a;
+  --c-grid: rgb(255 255 255 / 0.03);
 }
 
 /*  Paleta: modo claro  */
@@ -44,6 +45,8 @@
   --c-code-string: #15803d;
   --c-code-literal: #c2410c;
   --c-code-method: #a16207;
+
+  --c-grid: rgb(0 0 0 / 0.06);
 }
 
 /* Conectar la paleta con Tailwind */
@@ -75,6 +78,12 @@
   html {
     @apply bg-bg text-fg font-sans antialiased;
     scroll-padding-top: 5rem;
+
+    /* Fondo de cuadrícula, como un bloc */
+    background-image:
+      linear-gradient(to right, var(--c-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--c-grid) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
   h1,
