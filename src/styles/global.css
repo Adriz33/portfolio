@@ -23,7 +23,7 @@
   --c-code-string: #86efac;
   --c-code-literal: #fdba74;
   --c-code-method: #fde68a;
-  --c-grid: rgb(255 255 255 / 0.03);
+  --c-grid: #86efad17;
 }
 
 /*  Paleta: modo claro  */
@@ -45,8 +45,6 @@
   --c-code-string: #15803d;
   --c-code-literal: #c2410c;
   --c-code-method: #a16207;
-
-  --c-grid: rgb(0 0 0 / 0.06);
 }
 
 /* Conectar la paleta con Tailwind */
