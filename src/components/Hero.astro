@@ -6,14 +6,16 @@ import fotoPerfil from '../assets/imgperfil.jpg';
 const code: [string, string][][] = [
   [['keyword', 'public class '], ['type', 'AdrianPeña'], ['plain', ' {']],
   [],
-  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  rol = '], ['string', '"Desarrollador web"'], ['plain', ';']],
-  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', '  busco = '], ['string', '"Empleo"'], ['plain', ';']],
-  [['plain', '  '], ['keyword', 'private boolean'], ['plain', ' disponible = '], ['literal', 'true'], ['plain', ';']],
-  [['plain', '  '], ['keyword', 'public '], ['type', 'String'], ['plain', ' '], ['method', 'contactar'], ['plain', '() {']],
-  [['plain', '    '], ['keyword', 'return '], ['string', '"adriz6149@gmail.com"'], ['plain', ';']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', ' rol;']],
+  [['plain', '  '], ['keyword', 'private '], ['type', 'String'], ['plain', ' busco;']],
+  [['plain', '  '], ['keyword', 'private boolean'], ['plain', ' disponible;']],
+  [],
+  [['plain', '  '], ['keyword', 'public '], ['method', 'AdrianPeña'], ['plain', '() {']],
+  [['plain', '    '], ['keyword', 'this'], ['plain', '.rol = '], ['string', '"Desarrollador web"'], ['plain', ';']],
+  [['plain', '    '], ['keyword', 'this'], ['plain', '.busco = '], ['string', '"Empleo"'], ['plain', ';']],
+  [['plain', '    '], ['keyword', 'this'], ['plain', '.disponible = '], ['literal', 'true'], ['plain', ';']],
   [['plain', '  }']],
   [['plain', '}']],
-
 ];
 
 const colors: Record<string, string> = {

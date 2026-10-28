@@ -3,7 +3,7 @@
 @import "@fontsource-variable/fraunces";
 @import "@fontsource-variable/geist-mono";
 
-/* Paleta: modo oscuro (por defecto) */
+/* Paleta (modo oscuro) */
 :root {
   color-scheme: dark;
 
@@ -24,27 +24,6 @@
   --c-code-literal: #fdba74;
   --c-code-method: #fde68a;
   --c-grid: #86efad17;
-}
-
-/*  Paleta: modo claro  */
-[data-theme="light"] {
-  color-scheme: light;
-
-  --c-bg: #ebebe8;
-  --c-surface: #ffffff;
-  --c-surface-2: #f3f3f1;
-  --c-border: #d4d4d1;
-  --c-border-strong: #b9b9b5;
-  --c-fg: #18181b;
-  --c-muted: #52525b;
-  --c-accent: #1d4ed8;
-  --c-success: #16a34a;
-
-  --c-code-keyword: #7c3aed;
-  --c-code-type: #1d4ed8;
-  --c-code-string: #15803d;
-  --c-code-literal: #c2410c;
-  --c-code-method: #a16207;
 }
 
 /* Conectar la paleta con Tailwind */
@@ -105,18 +84,6 @@
       scroll-behavior: smooth;
     }
   }
-
-  .theme-icon-moon {
-    display: none;
-  }
-
-  [data-theme="light"] .theme-icon-sun {
-    display: none;
-  }
-
-  [data-theme="light"] .theme-icon-moon {
-    display: block;
-  }
 }
 /* Carrusel de tecnologías */
 .marquee {
@@ -158,6 +125,6 @@
   animation-direction: reverse;
 }
 
-:root:not([data-theme="light"]) .invert-on-dark {
+.invert-on-dark {
   filter: invert(1);
 }
