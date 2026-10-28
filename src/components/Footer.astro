@@ -1,0 +1,36 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+  { href: 'https://github.com/Adriz33', name: 'GitHub' },
+  { href: 'https://linkedin.com/in/adrian-peña-gómez97', name: 'LinkedIn' },
+];
+
+const link = 'transition-colors hover:text-fg';
+---
+
+<footer class="border-t border-border bg-bg/70 backdrop-blur-md">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-4 min-h-19 font-mono text-sm text-muted">
+    <p>
+      © {year} Adrián Peña ·{" "}
+      <a
+        href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
+        target="_blank"
+        rel="license noopener noreferrer"
+        class={link}
+      >
+        CC BY-NC-ND 4.0<span class="sr-only"> (abre en una pestaña nueva)</span>
+      </a>
+    </p>
+
+    <ul class="flex gap-x-5">
+      {links.map((item) => (
+        <li>
+          <a href={item.href} target="_blank" rel="noopener noreferrer" class={link}>
+            {item.name} ↗<span class="sr-only"> (abre en una pestaña nueva)</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>
